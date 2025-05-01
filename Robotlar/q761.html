@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>Q761 – ENGEL TANIMAZ BOT</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a href="q761-3d.html" target="_blank"><button>🔍 3D Modeli Görüntüle</button></a>
+
+  <h1>Q761 – ENGEL TANIMAZ BOT</h1>
+
+  <h2>📜 Kullanım Kılavuzu:</h2>
+  <p>
+    Makinenin üzerindeki, açma kapama tuşunu bulun ve makineyi açın. Açtıktan sonra makine ok yönü yukarı bakacak şekildeyken ipi boynunuza asın. Ardından yürümeye başlayın ve cihazı test edin.
+  </p>
+
+  <p>
+    Q761 BİR GÖRME ENGELİ OLAN BİREYLER İÇİNDİR. EN ÖNDEKİ SENSÖR SAYESİNDE ENGELE OLAN MESAFEYİ ALGILAYARAK ANAKARTTAN SES CİHAZINA AKTARIR.
+  </p>
+
+  <h2>🖼️ Görseller</h2>
+  <img src="resimler/1.jpg" alt="Q761 Foto 1" width="400">
+  <img src="resimler/2.jpg" alt="Q761 Foto 2" width="400">
+  <img src="resimler/3.jpg" alt="Q761 Foto 3" width="400">
+  <img src="resimler/4.jpg" alt="Q761 Foto 4" width="400">
+  <img src="resimler/5.jpg" alt="Q761 Foto 5" width="400">
+
+  <h2>⚙️ Özellikler</h2>
+  <ul>
+    <li>Engel algılama</li> <!-- 1 -->
+    <li>Uzun kullanımlı batarya</li> <!-- 3 -->
+    <li>Değiştirilebilir pil</li> <!-- 4 -->
+    <li>1 yıl garanti destekli</li> <!-- 5 -->
+    <li>Yüksek hassasiyetli sensör</li> <!-- 6 -->
+    <li>Görme engelli kullanıcılar için özel tasarım</li> <!-- 10 -->
+    <li>Kolay taşınabilir</li> <!-- 11 -->
+    <li>Düşük güç tüketimi</li> <!-- 12 -->
+    <li>Çevre dostu</li> <!-- 14 -->
+  </ul>
+
+  <h2>🛠️ Malzemeler</h2>
+  <ul>
+    <li>Arduino at Mega 2560</li>
+    <li>HC-SR04 Ultrasonik Sensör</li>
+    <li>Buzzer</li>
+    <li>9v pil</li>
+  </ul>
+
+  <h2>⚠️ DİKKAT EDİLMESİ GEREKENLER!</h2>
+  <ul>
+    <li>Buzzera su değmemeli!</li>
+    <li>Sensöre herhangi bir cisim sokulmamalı ve su değmemeli</li>
+    <li>Dış kaplamaya su değmemeli ve bir cisim sokulmamalıdır.</li>
+    <li>Pil değişimi için başvuru alanına gidiniz!</li>
+  </ul>
+
+  <a href="basvuru.html"><button>⬅️ BAŞVURU NOKTASI</button></a>
+  <a href="index.html"><button>⬅️ Ana Sayfaya Dön</button></a>
+  <div style="margin-top: 30px; text-align: center;">
+    <a href="Q761 CİHAZ BİLGİLERİ.docx" download class="download-btn">📥 Cihaz Bilgilerini İndir</a>
+    <br><br>
+    <a href="Q761 BİLGİ KARTI.pdf" download class="download-btn">📥 Cihaz Kartını İndir</a>
+  </div>
+  <button id="dark-mode-toggle">🌙 Dark Mode</button>
+
+<script>
+  // Tema değiştirme fonksiyonu
+  const toggleButton = document.getElementById('dark-mode-toggle');
+  const currentTheme = localStorage.getItem('theme');
+
+  if (currentTheme === 'dark') {
+    document.body.classList.add('dark-mode');
+  }
+
+  toggleButton.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+    if (document.body.classList.contains('dark-mode')) {
+      localStorage.setItem('theme', 'dark');
+    } else {
+      localStorage.setItem('theme', 'light');
+    }
+  });
+</script>
+
+  <footer>
+    <p id="footerText">TURKBOT © <span id="currentDate"></span></p>
+  </footer>
+  <script src="footer.js"></script>
+</body>
+</html>

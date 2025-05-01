@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TURKBOT - Cihazlar Listesi</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="content">
+    <h1>TURKBOT - Cihazlar Listesi</h1>
+
+    <div class="device-list">
+
+      <!-- Cihaz Kartı 1 -->
+      <div class="device-card">
+        <h2>Q761 – ENGEL TANIMAZ BOT</h2>
+        <p class="device-tags">
+          <span class="tag">Engel Tanımaz</span>
+          <span class="tag">Otonom</span>
+        </p>
+        <a href="q761.html">
+          <button>Detayları Gör</button>
+        </a>
+      </div>
+
+      <!-- Cihaz Kartı 2 -->
+      <div class="device-card">
+        <h2>Q451 - GECE LAMBASI</h2>
+        <p class="device-tags">
+          <span class="tag">Işık Sensörü</span>
+          <span class="tag">Ev Otomasyonu</span>
+        </p>
+        <a href="q451.html">
+          <button>Detayları Gör</button>
+        </a>
+      </div>
+
+      <!-- Cihaz Kartı 3 -->
+      <div class="device-card">
+        <h2>Q862 - SU SEBİLİ</h2>
+        <p class="device-tags">
+          <span class="tag">Su</span>
+          <span class="tag">Otomatik</span>
+        </p>
+        <a href="q862.html">
+          <button>Detayları Gör</button>
+        </a>
+      </div>
+
+    </div>
+
+    <button id="dark-mode-toggle">🌙 Dark Mode</button>
+  </div>
+
+  <footer>
+    <p id="footerText">TURKBOT © <span id="currentDate"></span></p>
+  </footer>
+
+  <script>
+    // Dark mode toggle
+    const toggleButton = document.getElementById('dark-mode-toggle');
+    const currentTheme = localStorage.getItem('theme');
+
+    if (currentTheme === 'dark') {
+      document.body.classList.add('dark-mode');
+    }
+
+    toggleButton.addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+      localStorage.setItem('theme', document.body.classList.contains('dark-mode') ? 'dark' : 'light');
+    });
+
+    // Footer yılı güncelle
+    document.getElementById("currentDate").textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
